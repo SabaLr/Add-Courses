@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Acceuil</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row  ">
+
+            <div class="col-7 mt-5">
+                <img class="logo" src="white.png " alt="logo" style=" width: 140px; height: 40px;">
+            </div>
+            <div class="col-5 mt-5">
+                <button type="button" id="reserve" class="btn " data-toggle="modal" data-target="#Reservation">Reservation</button>
+                <button type="button" id="modifier" class="btn  " data-toggle="modal" data-target="#Modification">Modification</button>
+                <button type="button" id="confirme" class="btn " data-toggle="modal" data-target="#confirmation">Confirmation</button>
+
+            </div>
+
+            <!-- Modal -->
+
+
+            <form>
+                <div id="Reservation" class="modal" tabindex="-1" role="dialog">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title title"> Reservation de la semaine </h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
+                            </div>
+                            <div class="modal-body">
+                                <p>
+                                    Selectioner les jours vous disponible dans l'école avec l'option de le repas .
+                                    <p>
+                                        <div class="jours input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text">
+                                                    <input id="Lundi" type="checkbox" aria-label="Checkbox for following text input" onclick="ch()">
+                                                </div>
+                                            </div><br>
+                                            <p class="jour mt-2"> &nbsp; Lundi </p>
+                                            <div id="Lundi1" style="display: none;">
+                                                <br>
+                                                <input type="radio" name="plat1" aria-label="Radio button for following text input" checked="a"> Poulet&nbsp;
+                                                <input type="radio" name="plat1" aria-label="Radio button for following text input" checked="a"> Dinde&nbsp;
+                                                <input type="radio" name="plat1" aria-label="Radio button for following text input" checked="a"> Seffa
+                                            </div>
+                                        </div>
+
+                                        <br>
+
+                                        <div class="jours input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text">
+                                                    <input id="Mardi" type="checkbox" aria-label="Checkbox for following text input" onclick="ch1()">
+                                                </div>
+                                            </div>
+                                            <p class="jour mt-2"> &nbsp; Mardi </p>
+
+                                            <div id="Mardi1" style="display: none;">
+                                                <br>
+                                                <input type="radio" name="plat2" aria-label="Radio button for following text input" checked="a"> Poulet&nbsp;
+                                                <input type="radio" name="plat2" aria-label="Radio button for following text input" checked="a"> Dinde&nbsp;
+                                                <input type="radio" name="plat2" aria-label="Radio button for following text input" checked="a"> Viande haché
+                                            </div>
+                                        </div>
+                                        <br>
+
+                                        <div class="jours input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text">
+                                                    <input id="Mercredi" type="checkbox" aria-label="Checkbox for following text input" onclick="ch2()">
+                                                </div>
+                                            </div>
+
+                                            <p class="jour mt-2"> &nbsp; Mercredi </p>
+                                            <div id="Mercredi1" style="display: none;">
+                                                <br>
+                                                <input type="radio" name="plat3" aria-label="Radio button for following text input" checked="a"> Dinde&nbsp;
+                                                <input type="radio" name="plat3" aria-label="Radio button for following text input" checked="a"> Viande haché&nbsp;
+                                                <input type="radio" name="plat3" aria-label="Radio button for following text input" checked="a">Poulet
+                                            </div>
+                                        </div>
+                                        <br>
+
+                                        <div class="jours input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text">
+                                                    <input id="Jeudi" type="checkbox" aria-label="Checkbox for following text input" onclick="ch3()">
+                                                </div>
+                                            </div>
+
+                                            <p class="jour mt-2"> &nbsp; Jeudi </p>
+                                            <div id="Jeudi1" style="display: none;">
+                                                <br>
+                                                <input type="radio" name="plat4" aria-label="Radio button for following text input" checked="a"> Seffa&nbsp;
+                                                <input type="radio" name="plat4" aria-label="Radio button for following text input" checked="a"> Dinde&nbsp;
+                                                <input type="radio" name="plat4" aria-label="Radio button for following text input" checked="a"> Sandwitch
+                                            </div>
+                                        </div>
+                                        <br>
+
+                                        <div class="jours input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text">
+                                                    <input id="Vendredi" type="checkbox" aria-label="Checkbox for following text input" onclick="ch4()">
+                                                </div>
+                                            </div>
+
+                                            <p class="jour mt-2"> &nbsp; Vendredi </p>
+                                            <div id="Vendredi1" style="display: none;">
+                                                <br>
+                                                <input type="radio" name="plat5" aria-label="Radio button for following text input" checked="a"> Couscous&nbsp;
+                                                <input type="radio" name="plat5" aria-label="Radio button for following text input" checked="a"> Sandwitch
+
+                                            </div>
+                                        </div>
+
+                                        <center>
+                                            <button type="button" class="bt d-flex justify-item-center">Envoyer</button>
+                                        </center>
+                                    </p>
+                            </div>
+                            <div class="modal-footer">
+                            </div>
+                        </div>
+                    </div>
+            </form>
+            </div>
+
+
+            <form>
+                <div id="confirmation" class="modal" tabindex="-1" role="dialog">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title"> Confirmation par Code</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                            </div>
+                            <div class="modal-body">
+                                <p>
+                                    tapez le code pour confirmer recu votre demande!
+
+                                    <form>
+                                        <div class="form-group">
+                                            <input type="numbre" class="p form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Code"><br>
+                                            <button type="button" class="bt">Envoyer</button>
+
+                                        </div>
+                                    </form>
+                                </p>
+                            </div>
+                            <div class="modal-footer">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+
+
+
+
+
+
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+            <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+            <!-- JavaScript -->
+            <script type="text/javascript">
+                function ch() {
+
+                    x = document.getElementById("Lundi");
+                    if (x.checked == true) {
+                        Lundi1.style.display = "block";
+                    } else {
+                        Lundi1.style.display = "none";
+                    }
+                }
+
+
+                function ch1() {
+
+                    x = document.getElementById("Mardi");
+                    if (x.checked == true) {
+                        Mardi1.style.display = "block";
+                    } else {
+                        Mardi1.style.display = "none";
+                    }
+                }
+
+
+                function ch2() {
+
+                    x = document.getElementById("Mercredi");
+                    if (x.checked == true) {
+                        Mercredi1.style.display = "block";
+                    } else {
+                        Mercredi1.style.display = "none";
+                    }
+                }
+
+
+                function ch3() {
+
+                    x = document.getElementById("Jeudi");
+                    if (x.checked == true) {
+                        Jeudi1.style.display = "block";
+                    } else {
+                        Jeudi1.style.display = "none";
+                    }
+                }
+
+
+                function ch4() {
+
+                    x = document.getElementById("Vendredi");
+                    if (x.checked == true) {
+                        Vendredi1.style.display = "block";
+                    } else {
+                        Vendredi1.style.display = "none";
+                    }
+                }
+            </script>
+
+</body>
+
+</html>

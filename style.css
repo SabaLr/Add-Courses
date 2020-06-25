@@ -1,0 +1,97 @@
+#body {
+    background-color: rgba(224, 206, 172, 0.658);
+}
+
+#singup,
+#login {
+    border-radius: 1.25rem;
+    color: white;
+    box-shadow: 0 2px 17px 0 #9fc074;
+    text-transform: uppercase;
+}
+
+#jumbotron {
+    /* background-color: #E1AE57; */
+    background-image: url(pexels-photo-1640770.jpg);
+    opacity: 0.5;
+    border: solid 2px #9fc074;
+}
+
+div .item_card {
+    border: solid 2px #9fc074;
+    border-radius: 20px;
+    box-shadow: 0 2px 17px 0 #9fc074;
+}
+
+div .item_card img {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+
+/*----------------Footer----------------*/
+
+footer {
+    background: rgb(230, 173, 126);
+}
+
+footer div a {
+    color: black;
+}
+
+footer div a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+@media screen and (max-width: 950px) {
+    footer div {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+
+/*-------------Reservation file-------------------*/
+
+.Nom {
+    padding-left: 140px;
+}
+
+#reserve,
+#confirme,
+#modifier {
+    color: black;
+    text-transform: uppercase;
+}
+
+#Reservation .title {
+    text-align: center;
+    color: rgb(122, 187, 25);
+}
+
+.p {
+    border-radius: 100px;
+    box-shadow: 0 2px 17px 0 rgba(224, 206, 172, 0.658);
+}
+
+div .jours .jour {
+    text-transform: uppercase;
+}
+
+.bt {
+    border-radius: 9px;
+    border: 1px solid #9fc074;
+    box-shadow: 0 5px #9fc074;
+    background-color: rgba(224, 206, 172, 0.658);
+    color: black;
+    font-size: 17px;
+    font-weight: 100!important;
+    transition: all 0.3s ease 0s;
+}
+
+.bt:hover {
+    -webkit-box-shadow: 0px 5px 40px -10px #9fc074;
+    -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+    transition: all 0.3s ease 0s;
+}
